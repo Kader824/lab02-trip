@@ -1,4 +1,12 @@
-﻿Console.WriteLine("=== Part 1: Road Trip ===");
+﻿/*
+ *Name:        Kade Russell
+ *Course:      CSCI 1250, Section 001
+ *Assignment:  Lab 02, Trip Calculator
+ *Date:        September 22, 2026
+ *Description: Calculates the fuel, food, and work hours behind one road trip.
+*/
+
+Console.WriteLine("=== Part 1: Road Trip ===");
 
 Console.WriteLine(" How many miles in the road trip? ");
 double totalMiles = Convert.ToDouble(Console.ReadLine());
@@ -45,3 +53,37 @@ Console.WriteLine("=== Part 3: Paycheck ===");
 
 Console.Write("Hours worked this week: ");
 double hoursWorked = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Hourly rate: ");
+double hourlyRate = Convert.ToDouble(Console.ReadLine());
+
+const double taxRate = 0.18;
+
+double grossPay = hoursWorked * hourlyRate;
+
+double taxWithheld = grossPay * taxRate;
+
+double takeHomePay = grossPay - taxWithheld;
+
+Console.WriteLine();
+
+Console.WriteLine("Gross pay: " + grossPay.ToString("C"));
+Console.WriteLine("Tax withheld: " + taxWithheld.ToString("C"));
+Console.WriteLine("Take home pay: " + takeHomePay.ToString("C"));
+
+Console.WriteLine("=== Part 4: The Whole Trip ===");
+
+double tripTotal = fuelCost + pizzaCost; 
+
+double costPerPerson = tripTotal / people;
+
+double takeHomePayPerHour = takeHomePay / hoursWorked;
+
+double hoursNeeded = costPerPerson / takeHomePayPerHour;
+
+Console.WriteLine();
+
+Console.WriteLine("Trip total: " + tripTotal.ToString("C"));
+Console.WriteLine("Cost per person: " + costPerPerson.ToString("C"));
+Console.WriteLine("Take home pay per hour: " + takeHomePayPerHour.ToString("C"));
+Console.WriteLine("Hours you must work to cover your share: " + hoursNeeded.ToString("F2"));

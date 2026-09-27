@@ -6,6 +6,7 @@
  *Description: Calculates the fuel, food, and work hours behind one road trip.
 */
 
+// Part 1 calculates the fuel cost for the road trip.
 Console.WriteLine("=== Part 1: Road Trip ===");
 
 Console.WriteLine(" How many miles in the road trip? ");
@@ -24,6 +25,7 @@ double fuelCost = gallonsNeeded * pricePerGallon;
 Console.WriteLine("Gallons needed: " + gallonsNeeded.ToString("F2"));
 Console.WriteLine("Fuel cost: " + fuelCost.ToString("c"));
 
+// Part 2 calculates the pizza cost and slices per person.
 Console.WriteLine("=== Part 2: Pizza Party ===");
 
 Console.Write("How many people are going: ");

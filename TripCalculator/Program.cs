@@ -51,6 +51,7 @@ Console.WriteLine("Total slices: " + totalSlices);
 Console.WriteLine("Slices per person: " + slicesPerPerson.ToString("F1"));
 Console.WriteLine("Pizza cost: " + pizzaCost.ToString("C"));
 
+// Part 3 calculates gross pay, taxes, and take-home pay.
 Console.WriteLine("=== Part 3: Paycheck ===");
 
 Console.Write("Hours worked this week: ");

@@ -9,18 +9,19 @@
 // Part 1 calculates the fuel cost for the road trip.
 Console.WriteLine("=== Part 1: Road Trip ===");
 
-Console.WriteLine(" How many miles in the road trip? ");
+Console.Write("Road trip miles: ");
 double totalMiles = Convert.ToDouble(Console.ReadLine());
 
-Console.Write("How many miles per gallon? ");
+Console.Write("Miles per gallon: ");
 double milesPerGallon = Convert.ToDouble(Console.ReadLine());
 
-Console.Write("What is the price per gallon of gas? ");
+Console.Write("Price per gallon: ");
 double pricePerGallon = Convert.ToDouble(Console.ReadLine());
 
 double gallonsNeeded = totalMiles / milesPerGallon;
-
 double fuelCost = gallonsNeeded * pricePerGallon;
+
+Console.WriteLine();
 
 Console.WriteLine("Gallons needed: " + gallonsNeeded.ToString("F2"));
 Console.WriteLine("Fuel cost: " + fuelCost.ToString("c"));
@@ -40,9 +41,7 @@ double pricePerPizza = Convert.ToDouble(Console.ReadLine());
 const int slicesPerPizza = 8;
 
 int totalSlices = pizzas * slicesPerPizza;
-
 double slicesPerPerson = (double)totalSlices / people;
-
 double pizzaCost = pizzas * pricePerPizza;
 
 Console.WriteLine();
@@ -63,9 +62,7 @@ double hourlyRate = Convert.ToDouble(Console.ReadLine());
 const double taxRate = 0.18;
 
 double grossPay = hoursWorked * hourlyRate;
-
 double taxWithheld = grossPay * taxRate;
-
 double takeHomePay = grossPay - taxWithheld;
 
 Console.WriteLine();
@@ -78,11 +75,8 @@ Console.WriteLine("Take home pay: " + takeHomePay.ToString("C"));
 Console.WriteLine("=== Part 4: The Whole Trip ===");
 
 double tripTotal = fuelCost + pizzaCost; 
-
 double costPerPerson = tripTotal / people;
-
 double takeHomePayPerHour = takeHomePay / hoursWorked;
-
 double hoursNeeded = costPerPerson / takeHomePayPerHour;
 
 Console.WriteLine();
